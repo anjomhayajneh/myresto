@@ -35,6 +35,9 @@ return view('dashboard');
 Route::get('/product',function(){
 return view('products.index');
 });
+Route::get('/landing',function(){
+    return view('landing');
+    });
 
 
 //Route::post();
