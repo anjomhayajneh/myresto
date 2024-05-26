@@ -3,6 +3,18 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+//Route::group([
+  //  "prefix"=> LaravelLocalization::setLocale()
+    //'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+//],function(){
+  //  Route::group([
+    //    'prefix'=>"dash"
+    //],function(){
+      //  Route::view('/dash', 'dashboard');
+        //Route::view('/product','products.index');
+    //});
+//});
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,3 +35,12 @@ return view('dashboard');
 Route::get('/product',function(){
 return view('products.index');
 });
+
+
+//Route::post();
+//Route::get();
+//Route::put();
+//Route::delete();
+//Route::resource();
+//Route::('url','view');
+
