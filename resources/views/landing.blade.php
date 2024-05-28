@@ -11,7 +11,7 @@
 <div class="container">
 <div class="row h-50 bg-img col-dir">
     <div class="nav">
-        <div class="col-4"></div>
+        <div class="col-5"></div>
         <div class="col-8">
             <ul>
                 <li><a href="">Home</a></li>
@@ -32,24 +32,28 @@
 <div class="row h-50 border ">
     <div class="card">
         <div class="card-top"><img src="{{ asset('landingstl/img/meals/burger1.jpg') }}"alt=""class="circle"></div>
-    <div class="card-bottom"> </div>
+    <div class="card-bottom">
     <h2>Burger</h2>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis odit quod est laboriosam nobis. Vitae minima et nam doloremque suscipit eveniet doloribus soluta. Natus voluptatem molestiae eum optio, qui deserunt?</p>
-    order
+    <a href="#" class="btn btn-order">order now</a>
+</div>
 </div>
 
     <div class="card">
         <div class="card-top"><img src="{{ asset('landingstl/img/meals/burger1.jpg') }}"alt=""class="circle"></div>
-    <div class="card-bottom"> </div>
+    <div class="card-bottom">
     <h2>Burger</h2>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis odit quod est laboriosam nobis. Vitae minima et nam doloremque suscipit eveniet doloribus soluta. Natus voluptatem molestiae eum optio, qui deserunt?</p>
+    <a href="#" class="btn btn-order">order now</a>
 </div>
-
+</div>
     <div class="card">
         <div class="card-top"><img src="{{ asset('landingstl/img/meals/burger1.jpg') }}"alt=""class="circle"></div>
-    <div class="card-bottom"></div>
+    <div class="card-bottom">
     <h2>Burger</h2>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis odit quod est laboriosam nobis. Vitae minima et nam doloremque suscipit eveniet doloribus soluta. Natus voluptatem molestiae eum optio, qui deserunt?</p>
+    <a href="#" class="btn btn-order">order now</a>
+</div>
 </div>
 </div>
 </div>

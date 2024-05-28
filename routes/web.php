@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 //Route::group([
   //  "prefix"=> LaravelLocalization::setLocale()
     //'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
@@ -38,7 +38,12 @@ return view('products.index');
 Route::get('/landing',function(){
     return view('landing');
     });
+Route::group([
+    'middleware'=>'IsAdmin'
+],function(){
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+});
 
 //Route::post();
 //Route::get();
@@ -47,3 +52,11 @@ Route::get('/landing',function(){
 //Route::resource();
 //Route::('url','view');
 
+
+Auth::routes();
+
+
+Route::get('/index',function(){
+    return view('index');
+
+})->name('index');
