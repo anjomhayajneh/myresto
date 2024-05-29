@@ -13,7 +13,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+@if (Auth::user()->hasRole('administrator '))
+<h1 class="text-center text-danger">YOU ARE Administrator</h1>
+@else
+<h1 class="text-center text-danger">YOU ARE Not Administrator {{ Auth::user()->role->name }}</h1>
                     {{ __('You are logged in!') }}
                 </div>
             </div>
