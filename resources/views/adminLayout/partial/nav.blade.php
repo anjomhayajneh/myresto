@@ -11,6 +11,15 @@
           <i class="fe fe-sun fe-16"></i>
         </a>
       </li>
+      <ul style="list-style: none">
+        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+            <li>
+                <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                    {{ $properties['native'] }}
+                </a>
+            </li>
+        @endforeach
+    </ul>
       <li class="nav-item">
         <a class="nav-link text-muted my-2" href="./#" data-toggle="modal" data-target=".modal-shortcut">
           <span class="fe fe-grid fe-16"></span>
@@ -36,4 +45,3 @@
       </li>
     </ul>
   </nav>
- 

@@ -5,12 +5,16 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+// routes/web.php
+// Define route for the categories list
+// Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+// Define more routes as needed
+
 Route::group([
     'prefix' => LaravelLocalization::setLocale(),
     'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
 ], function() {
     Auth::routes();
-
     Route::group(['prefix' => 'dash'], function() {
         Route::resource('categories', CategoryController::class);
         Route::view('/', 'dashboard')->name('dashboard');
@@ -67,4 +71,5 @@ Route::get('/index',function(){
 })->name('index');
 Route::get('/dashboard', function () {
     return view('dashboard');
+
 })->middleware(['auth'])->name('dashboard');

@@ -20,14 +20,13 @@
         <i class="fe fe-home fe-16"></i>
         <span class="ml-3 item-text">{{ ('Categories') }}</span><span class="sr-only">(current)</span>
       </a>
-      <ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
-        <li class="nav-item active">
-            <a class="nav-link pl-3" href="{{ route('/categories.index') }}"> <span class="ml-1 item-text">{{ __('categories list') }}</span>
-            </a>
-
+      {{-- <ul class="collapse list-unstyled pl-4 w-100" id="dashboard"> --}}
+        {{-- <li class="nav-item active"> --}}
+            {{-- <a class="nav-link pl-3" href="{{ route('categories.index') }}"> <span class="ml-1 item-text">{{ __('categories list') }}</span> --}}
+            {{-- </a> --}}
         </li>
         <li class="nav-item">
-          <a class="nav-link pl-3" href="{{ url('dash') }}"><span class="ml-1 item-text">empty</span></a>
+          <a class="nav-link pl-3" href="{{ url('product') }}"><span class="ml-1 item-text">{{ __('categories list') }}</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link pl-3" href="./dashboard-sales.html"><span class="ml-1 item-text">E-commerce</span></a>

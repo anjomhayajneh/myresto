@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "myresto";
+    src:url('../fonts/ar/Rubik-Black.ttf') ;
+}
+*{
+    font-family: "myresto";
+}
 [data-simplebar] {
   position: relative;
   flex-direction: column;
