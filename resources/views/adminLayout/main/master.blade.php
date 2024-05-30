@@ -24,7 +24,7 @@
               <div class="mb-2 align-items-center">
                 <div class="card shadow mb-4">
                   <div class="card-body">
-                    <div class="row mt-1 align-items-center">
+                    <div class="col mt-1 ">
                       @yield('DynamicContent')
                  <!-- Striped rows -->
               </div> <!-- .row-->
