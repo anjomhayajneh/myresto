@@ -15,7 +15,7 @@ Route::group([
     'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
 ], function() {
     Auth::routes();
-    Route::group(['prefix' => 'dash'], function() {
+        Route::group(['prefix' => 'dash'], function() {
         Route::resource('categories', CategoryController::class);
         Route::view('/', 'dashboard')->name('dashboard');
         Route::view('/product', 'products.index')->name('products.index');
@@ -73,3 +73,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 
 })->middleware(['auth'])->name('dashboard');
+Route::get('/categories',function(){
+    return view('views');
+
+})->name('category');

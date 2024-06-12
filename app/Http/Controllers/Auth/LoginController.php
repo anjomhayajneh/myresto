@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Laratrust\Laratrust;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class LoginController extends Controller
 {
@@ -25,8 +27,8 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
-
+    // protected $redirectTo = LaravelLocalization::setLocale().'/home';
+    protected $redirectTo ='/en/dash/dash';
     /**
      * Create a new controller instance.
      *
